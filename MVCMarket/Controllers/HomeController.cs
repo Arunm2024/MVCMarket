@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MVCMarket.Controllers
+namespace MvcDemo.Controllers
 {
     public class HomeController : Controller
     {
@@ -8,5 +8,6 @@ namespace MVCMarket.Controllers
         {
             return View();
         }
+
     }
 }

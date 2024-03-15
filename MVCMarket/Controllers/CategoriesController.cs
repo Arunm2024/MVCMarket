@@ -1,19 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MVCMarket.Models;
+using MvcDemo.Models;
 
-namespace MVCMarket.Controllers
+namespace MvcDemo.Controllers
 {
     public class CategoriesController : Controller
     {
         public IActionResult Index()
         {
-            var category= CategoriesRepository.GetCategory();
-            return View(category);
+            var categories = CategoriesRepository.GetCategory();
+            return View(categories);
         }
         public IActionResult Edit(int? id)
         {
-            var category = CategoriesRepository.GetCategoryById(id.HasValue?id.Value:0);
-            //var category= new Category() { CategoryId=id.HasValue? id.Value : 0 };
+            var category= CategoriesRepository.GetCategoryById(id.HasValue ? id.Value : 0);
             return View(category);
         }
         [HttpPost]
