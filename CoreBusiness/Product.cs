@@ -1,12 +1,6 @@
-﻿using CoreBusiness;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Plugins.DataStore.SQL
+namespace CoreBusiness
 {
     public class Product
     {
@@ -19,7 +13,7 @@ namespace Plugins.DataStore.SQL
         [Required]
         public string Name { get; set; } = string.Empty;
 
-        [Required]
+        [Required]        
         public int? Quantity { get; set; }
 
         [Required]
@@ -27,6 +21,6 @@ namespace Plugins.DataStore.SQL
         public double? Price { get; set; }
 
         // navigation property for ef core
-        public Categorys? Category { get; set; }
+        public Category? Category { get; set; }
     }
 }
